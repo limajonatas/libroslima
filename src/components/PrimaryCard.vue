@@ -14,8 +14,12 @@
           <slot name="content" />
         </div>
         <template v-slot:error>
-          <div class="absolute-full flex flex-center bg-negative text-white">
-            Cannot load image
+          <div
+            class="absolute-full flex flex-center column primary-card__error-image"
+          >
+            <q-icon name="error" size="lg" />
+            <span class="text-h6">Ops!</span>
+            <span> Não foi possível carregar a imagem</span>
           </div>
         </template>
       </q-img>
@@ -23,7 +27,6 @@
     <q-card-actions align="right" class="q-pa-md absolute-top">
       <slot name="actions" />
     </q-card-actions>
-    {{ styleBackground.modoLight }}
   </q-card>
 </template>
 
@@ -57,6 +60,9 @@ export default defineComponent({
     background: rgba(0, 0, 0, 0.708);
   }
   background-color: $primary;
+  &__error-image {
+    background: rgba(251, 251, 251, 0.16);
+  }
 }
 .primary-card-dark {
   background-color: $dark-secondary;

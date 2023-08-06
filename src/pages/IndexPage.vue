@@ -17,7 +17,7 @@
 
 
 
-    <primary-card image="https://cdn.quasar.dev/img/parallax2.jpg" @click="teste">
+    <primary-card image="https://cdn.quar.dev/img/parallax2.jpg" @click="teste">
       <template v-slot:content>
         <text>
           Teste

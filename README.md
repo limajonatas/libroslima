@@ -1,6 +1,6 @@
-# LibrosLima (libroslima)
+e# LibrosLima (libroslima)
 
-App LibrosLima for management of reads 
+App LibrosLima for management of reads
 
 ## Install the dependencies
 ```bash
