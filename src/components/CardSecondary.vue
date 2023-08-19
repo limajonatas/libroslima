@@ -2,13 +2,13 @@
   <q-card
     class="card-secondary"
     :class="[
-      {'card-secondary-content-align-right': contentAlignRight},
+      { 'card-secondary-content-align-right': contentAlignRight },
       { 'card-secondary-with-image': image },
       { 'card-secondary-dark': $q.dark.isActive },
       { 'card-secondary-light': styleBackground.modoLight },
     ]"
   >
-    <q-card-section class="row items-center justify-center q-pa-sm">
+    <q-card-section class="row text-black items-center justify-center q-pa-sm">
       <slot name="content" />
     </q-card-section>
     <q-card-section class="full-width q-pa-none" v-if="image">
@@ -23,12 +23,23 @@
           >
             <q-icon name="error" size="lg" />
             <span class="text-caption text-center">
-              Não foi possível carregar a imagem</span
-            >
+              Não foi possível carregar a imagem
+            </span>
           </div>
         </template>
       </q-img>
     </q-card-section>
+    <q-card-actions
+      align="left"
+      class="q-pa-none absolute-left"
+      style="width: 43%"
+    >
+      <div
+        class="card-secondary__card-caption text-white now-wrap row justify-center q-pa-xs absolute-bottom items-center"
+      >
+        <slot name="actions" />
+      </div>
+    </q-card-actions>
   </q-card>
 </template>
 
@@ -72,17 +83,21 @@ export default defineComponent({
     background: rgba(251, 251, 251, 0.16);
     color: rgba(255, 255, 255, 0.5);
   }
+  &__card-caption {
+    background: rgba(0, 0, 0, 0.708);
+    border-radius: 0 0 4px 4px;
+    gap: 8px;
+  }
 }
 .card-secondary-with-image {
   /* when there is an image, the content is 60% of the card */
   & > *:first-child {
-    flex: 0 0 60%;
+    flex: 0 0 57%;
   }
 }
 
 .card-secondary-content-align-right {
   flex-direction: row-reverse; /* Reverse the order of flex items */
-
 }
 
 .card-secondary-dark {

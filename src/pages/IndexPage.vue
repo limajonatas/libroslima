@@ -20,11 +20,16 @@
     >
       <template v-slot:content>
         <div class="text-h6">
-          Minha Coleção jasfvnangojv anhjsfvjans ahjkbna nhajknjvn
+          Minha Coleção jasfvnangojv anhjsfvjans
         </div>
       </template>
+      <template v-slot:actions>
+        <q-btn round @click.stop color="primary" icon="star" />
+        <q-btn round color="primary" icon="open_in_new" />
+        <q-btn round color="primary" icon="show_chart" />
+      </template>
     </card-secondary>
-
+    
     <card-primary
       image="https://cdn.quasar.dev/img/parallax2.jpg"
       @click="teste"
